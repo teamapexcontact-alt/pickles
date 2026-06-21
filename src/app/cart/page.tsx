@@ -36,7 +36,7 @@ export default function CartPage() {
     <div className="container-custom py-12">
       <div className="flex items-center justify-between mb-8">
         <div>
-          <Link href="/" className="inline-flex items-center gap-1.5 text-sm text-neutral-500 hover:text-accent transition-colors mb-2">
+          <Link href="/" className="inline-flex items-center gap-1.5 text-sm text-neutral-500 hover:text-brand-600 transition-colors mb-2">
             <ArrowLeft className="w-4 h-4" /> Back to Home
           </Link>
           <h1 className="heading-2">Shopping Cart</h1>
@@ -60,12 +60,12 @@ export default function CartPage() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <Link href={`/products/${item.product.slug}`}>
-                      <h3 className="font-heading font-semibold text-neutral-900 hover:text-accent transition-colors truncate">
+                      <h3 className="font-heading font-semibold text-neutral-900 hover:text-brand-600 transition-colors truncate">
                         {item.product.name}
                       </h3>
                     </Link>
                     <p className="text-sm text-neutral-400">{item.variant.weightGrams}g</p>
-                    <p className="text-lg font-heading font-bold text-accent mt-1">
+                    <p className="text-lg font-heading font-bold text-brand-600 mt-1">
                       {formatCurrency(item.variant.price)}
                     </p>
                   </div>
@@ -83,7 +83,7 @@ export default function CartPage() {
                       {formatCurrency(item.variant.price * item.quantity)}
                     </p>
                   </div>
-                  <button onClick={() => removeItem(item.productVariantId)} className="p-2 rounded-md hover:bg-error-light text-neutral-400 hover:text-error transition-colors" aria-label="Remove item">
+                  <button onClick={() => removeItem(item.productVariantId)} className="p-2 rounded-md hover:bg-brand-50 text-neutral-400 hover:text-brand-600 transition-colors" aria-label="Remove item">
                     <Trash2 className="w-4 h-4" />
                   </button>
                 </div>
@@ -105,13 +105,13 @@ export default function CartPage() {
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-neutral-500">Shipping</span>
-                    <span className="text-accent font-medium">Free</span>
+                    <span className="text-brand-600 font-medium">Free</span>
                   </div>
                 </div>
 
                 <div className="flex justify-between items-center mb-6">
                   <span className="font-heading font-semibold text-lg">Total</span>
-                  <span className="font-heading font-bold text-2xl text-accent">{formatCurrency(subtotal)}</span>
+                  <span className="font-heading font-bold text-2xl text-brand-600">{formatCurrency(subtotal)}</span>
                 </div>
 
                 {user ? (

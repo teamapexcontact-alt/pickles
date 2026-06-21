@@ -63,12 +63,12 @@ function SignupForm() {
 
   return (
     <div>
-      <Link href="/" className="inline-flex items-center gap-1.5 text-sm text-neutral-500 hover:text-accent transition-colors mb-6 block">
+      <Link href="/" className="inline-flex items-center gap-1.5 text-sm text-neutral-500 hover:text-brand-600 transition-colors mb-6 block">
         <ArrowLeft className="w-4 h-4" /> Back to Home
       </Link>
       <div className="text-center mb-8">
         <Link href="/" className="inline-flex items-center gap-2 mb-6">
-          <span className="text-2xl font-heading font-bold text-accent">APEX</span>
+          <span className="text-2xl font-heading font-bold text-brand-600">APEX</span>
           <span className="text-lg font-heading font-medium text-neutral-700">Pickles</span>
         </Link>
         <h1 className="heading-3 mb-2">Create Account</h1>
@@ -140,14 +140,14 @@ function SignupForm() {
 
       <p className="text-center text-sm text-neutral-500 mt-6">
         By signing up, you agree to our{" "}
-        <Link href="/terms" className="text-accent hover:underline">Terms</Link>{" "}
+        <Link href="/terms" className="text-brand-600 hover:underline">Terms</Link>{" "}
         and{" "}
-        <Link href="/privacy" className="text-accent hover:underline">Privacy Policy</Link>
+        <Link href="/privacy" className="text-brand-600 hover:underline">Privacy Policy</Link>
       </p>
 
       <p className="text-center text-sm text-neutral-500 mt-6">
         Already have an account?{" "}
-        <Link href="/auth/login" className="text-accent font-medium hover:underline">
+        <Link href="/auth/login" className="text-brand-600 font-medium hover:underline">
           Sign in
         </Link>
       </p>

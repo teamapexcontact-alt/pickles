@@ -13,6 +13,10 @@ interface CartContextType {
   clearCart: () => void;
   getItemQuantity: (productVariantId: string) => number;
   isInCart: (productVariantId: string) => boolean;
+  cartOpen: boolean;
+  openCart: () => void;
+  closeCart: () => void;
+  toggleCart: () => void;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -22,6 +26,7 @@ const CART_STORAGE_KEY = "apex-pickles-cart";
 export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
   const [initialized, setInitialized] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false);
 
   useEffect(() => {
     try {
@@ -53,6 +58,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       }
       return [...prev, { productVariantId: variant.id, quantity, product, variant }];
     });
+    setCartOpen(true);
   }, []);
 
   const removeItem = useCallback((productVariantId: string) => {
@@ -99,6 +105,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
         clearCart,
         getItemQuantity,
         isInCart,
+        cartOpen,
+        openCart: () => setCartOpen(true),
+        closeCart: () => setCartOpen(false),
+        toggleCart: () => setCartOpen((prev) => !prev),
       }}
     >
       {children}

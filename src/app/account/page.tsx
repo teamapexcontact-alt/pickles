@@ -22,7 +22,7 @@ export default function AccountPage() {
     return (
       <div className="min-h-[60vh] flex items-center justify-center">
         <div className="text-center">
-          <div className="w-8 h-8 border-2 border-accent border-t-transparent rounded-full animate-spin mx-auto" />
+          <div className="w-8 h-8 border-2 border-brand-600 border-t-transparent rounded-full animate-spin mx-auto" />
           <p className="text-sm text-neutral-500 mt-3">Loading...</p>
         </div>
       </div>
@@ -69,7 +69,7 @@ export default function AccountPage() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`w-full flex items-center justify-between px-4 py-3 rounded-md text-sm font-medium transition-colors ${
                   activeTab === tab.id
-                    ? "bg-accent text-white"
+                    ? "bg-brand-600 text-white"
                     : "text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900"
                 }`}
               >

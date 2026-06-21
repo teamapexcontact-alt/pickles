@@ -49,10 +49,10 @@ export function slugify(text: string): string {
 
 export function getSpiceLevelColor(level: string): string {
   const colors: Record<string, string> = {
-    mild: 'bg-green-100 text-green-800',
-    medium: 'bg-yellow-100 text-yellow-800',
-    hot: 'bg-orange-100 text-orange-800',
-    'extra-hot': 'bg-red-100 text-red-800',
+    mild: 'bg-herb-100 text-herb-800',
+    medium: 'bg-gold-100 text-gold-800',
+    hot: 'bg-brand-100 text-brand-800',
+    'extra-hot': 'bg-brand-200 text-brand-900',
   };
   return colors[level] || 'bg-gray-100 text-gray-800';
 }
@@ -60,15 +60,15 @@ export function getSpiceLevelColor(level: string): string {
 export function getOrderStatusColor(status: string): string {
   const colors: Record<string, string> = {
     placed: 'bg-blue-100 text-blue-800',
-    preparing: 'bg-purple-100 text-purple-800',
-    packed: 'bg-indigo-100 text-indigo-800',
-    shipped: 'bg-cyan-100 text-cyan-800',
-    out_for_delivery: 'bg-orange-100 text-orange-800',
-    delivered: 'bg-green-100 text-green-800',
-    cancelled: 'bg-red-100 text-red-800',
-    returned: 'bg-gray-100 text-gray-800',
+    preparing: 'bg-gold-100 text-gold-800',
+    packed: 'bg-herb-100 text-herb-800',
+    shipped: 'bg-sky-100 text-sky-800',
+    out_for_delivery: 'bg-gold-100 text-gold-800',
+    delivered: 'bg-herb-100 text-herb-800',
+    cancelled: 'bg-brand-100 text-brand-800',
+    returned: 'bg-neutral-100 text-neutral-800',
   };
-  return colors[status] || 'bg-gray-100 text-gray-800';
+  return colors[status] || 'bg-neutral-100 text-neutral-800';
 }
 
 export function getOrderStatusLabel(status: string): string {
@@ -87,11 +87,11 @@ export function getOrderStatusLabel(status: string): string {
 
 export function getPaymentStatusColor(status: string): string {
   const colors: Record<string, string> = {
-    pending: 'bg-yellow-100 text-yellow-800',
-    paid: 'bg-green-100 text-green-800',
-    failed: 'bg-red-100 text-red-800',
+    pending: 'bg-gold-100 text-gold-800',
+    paid: 'bg-herb-100 text-herb-800',
+    failed: 'bg-brand-100 text-brand-800',
     refunded: 'bg-blue-100 text-blue-800',
-    partial: 'bg-orange-100 text-orange-800',
+    partial: 'bg-gold-100 text-gold-800',
   };
-  return colors[status] || 'bg-gray-100 text-gray-800';
+  return colors[status] || 'bg-neutral-100 text-neutral-800';
 }

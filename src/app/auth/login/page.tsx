@@ -123,12 +123,12 @@ function LoginForm() {
 
   return (
     <div>
-      <Link href="/" className="inline-flex items-center gap-1.5 text-sm text-neutral-500 hover:text-accent transition-colors mb-6">
+      <Link href="/" className="inline-flex items-center gap-1.5 text-sm text-neutral-500 hover:text-brand-600 transition-colors mb-6">
         <ArrowLeft className="w-4 h-4" /> Back to Home
       </Link>
       <div className="text-center mb-8">
         <Link href="/" className="inline-flex items-center gap-2 mb-6">
-          <span className="text-2xl font-heading font-bold text-accent">APEX</span>
+          <span className="text-2xl font-heading font-bold text-brand-600">APEX</span>
           <span className="text-lg font-heading font-medium text-neutral-700">Pickles</span>
         </Link>
         <h1 className="heading-3 mb-2">Welcome Back</h1>
@@ -138,13 +138,13 @@ function LoginForm() {
       <div className="flex gap-2 mb-6">
         <button
           onClick={() => { setAuthMethod("email"); setOtpSent(false); }}
-          className={`flex-1 py-2.5 text-sm font-medium rounded-md transition-colors ${authMethod === "email" ? "bg-accent text-white" : "bg-neutral-100 text-neutral-500 hover:bg-neutral-200"}`}
+          className={`flex-1 py-2.5 text-sm font-medium rounded-md transition-colors ${authMethod === "email" ? "bg-brand-600 text-white" : "bg-neutral-100 text-neutral-500 hover:bg-neutral-200"}`}
         >
           <Mail className="w-4 h-4 inline mr-1.5" /> Email
         </button>
         <button
           onClick={() => { setAuthMethod("phone"); setOtpSent(false); }}
-          className={`flex-1 py-2.5 text-sm font-medium rounded-md transition-colors ${authMethod === "phone" ? "bg-accent text-white" : "bg-neutral-100 text-neutral-500 hover:bg-neutral-200"}`}
+          className={`flex-1 py-2.5 text-sm font-medium rounded-md transition-colors ${authMethod === "phone" ? "bg-brand-600 text-white" : "bg-neutral-100 text-neutral-500 hover:bg-neutral-200"}`}
         >
           <Phone className="w-4 h-4 inline mr-1.5" /> Phone
         </button>
@@ -209,7 +209,7 @@ function LoginForm() {
               <button
                 type="button"
                 onClick={handleSendOtp}
-                className="w-full text-center text-sm text-accent hover:underline"
+                className="w-full text-center text-sm text-brand-600 hover:underline"
               >
                 Resend OTP
               </button>
@@ -240,7 +240,7 @@ function LoginForm() {
 
       <p className="text-center text-sm text-neutral-500 mt-8">
         Don&apos;t have an account?{" "}
-        <Link href="/auth/signup" className="text-accent font-medium hover:underline">
+        <Link href="/auth/signup" className="text-brand-600 font-medium hover:underline">
           Sign up
         </Link>
       </p>

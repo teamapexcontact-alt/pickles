@@ -44,8 +44,8 @@ export default function PrivacyPage() {
         {sections.map((section) => (
           <div key={section.title} className="p-6 rounded-lg border border-neutral-200 bg-white shadow-sm hover:bg-neutral-50/30 transition-colors">
             <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0 mt-1">
-                <section.icon className="w-5 h-5 text-accent" />
+              <div className="w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center flex-shrink-0 mt-1">
+                <section.icon className="w-5 h-5 text-brand-600" />
               </div>
               <div>
                 <h2 className="font-heading font-semibold text-lg text-neutral-900 mb-2">{section.title}</h2>
@@ -59,7 +59,7 @@ export default function PrivacyPage() {
       <div className="max-w-3xl mx-auto">
         <p className="text-sm text-neutral-500">
           For any privacy-related questions or requests, please contact us at{" "}
-          <a href="mailto:privacy@apexpickles.com" className="text-accent hover:underline">privacy@apexpickles.com</a>
+          <a href="mailto:privacy@apexpickles.com" className="text-brand-600 hover:underline">privacy@apexpickles.com</a>
         </p>
       </div>
     </div>

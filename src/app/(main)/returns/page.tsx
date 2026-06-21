@@ -27,8 +27,8 @@ export default function ReturnsPage() {
 
         <div className="p-6 rounded-lg border border-neutral-200 bg-white shadow-sm">
           <div className="flex items-start gap-4">
-            <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-              <RefreshCw className="w-6 h-6 text-accent" />
+            <div className="w-12 h-12 rounded-lg bg-brand-500/10 flex items-center justify-center flex-shrink-0">
+              <RefreshCw className="w-6 h-6 text-brand-600" />
             </div>
             <div>
               <h2 className="font-heading font-semibold text-xl text-neutral-900 mb-2">Refund Process</h2>
@@ -44,7 +44,7 @@ export default function ReturnsPage() {
 
         <div className="p-6 rounded-lg border border-neutral-200 bg-white shadow-sm">
           <div className="flex items-start gap-4">
-            <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+            <div className="w-12 h-12 rounded-lg bg-brand-500/10 flex items-center justify-center flex-shrink-0">
               <Shield className="w-6 h-6 text-neutral-700" />
             </div>
             <div>

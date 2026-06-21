@@ -40,7 +40,7 @@ export default function TrackOrderPage() {
               placeholder="Order number (e.g. APEX-12345)"
               value={orderNumber}
               onChange={(e) => setOrderNumber(e.target.value)}
-              className="w-full rounded-lg border border-neutral-200 pl-12 pr-4 py-3 text-sm focus:outline-none focus:border-accent"
+              className="w-full rounded-lg border border-neutral-200 pl-12 pr-4 py-3 text-sm focus:outline-none focus:border-brand-600"
               required
             />
           </div>
@@ -57,7 +57,7 @@ export default function TrackOrderPage() {
                   <p className="text-sm text-neutral-500">Order #APEX-12345</p>
                   <p className="text-lg font-heading font-semibold text-neutral-900">Classic Mango Pickle (500g) × 2</p>
                 </div>
-                <span className="px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-medium">In Transit</span>
+                <span className="px-3 py-1 rounded-full bg-brand-500/10 text-brand-600 text-sm font-medium">In Transit</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-neutral-500">
                 <MapPin className="w-4 h-4" />
@@ -70,9 +70,9 @@ export default function TrackOrderPage() {
             {timeline.map((step, i) => (
               <div key={step.status} className="flex gap-4 pb-8 last:pb-0 relative">
                 <div className="flex flex-col items-center">
-                  <div className={`w-4 h-4 rounded-full border-2 z-10 ${step.done ? "bg-accent border-accent" : "bg-white border-neutral-300"}`} />
+                  <div className={`w-4 h-4 rounded-full border-2 z-10 ${step.done ? "bg-brand-600 border-brand-600" : "bg-white border-neutral-300"}`} />
                   {i < timeline.length - 1 && (
-                    <div className={`w-0.5 flex-1 -mt-0.5 ${step.done ? "bg-accent" : "bg-neutral-200"}`} />
+                    <div className={`w-0.5 flex-1 -mt-0.5 ${step.done ? "bg-brand-600" : "bg-neutral-200"}`} />
                   )}
                 </div>
                 <div className="flex-1 -mt-1">
@@ -92,7 +92,7 @@ export default function TrackOrderPage() {
 
       {!tracked && (
         <div className="text-center">
-          <p className="text-neutral-500">Didn&apos;t receive an order number? <a href="/contact" className="text-accent hover:underline">Contact us</a></p>
+          <p className="text-neutral-500">Didn&apos;t receive an order number? <a href="/contact" className="text-brand-600 hover:underline">Contact us</a></p>
         </div>
       )}
     </div>

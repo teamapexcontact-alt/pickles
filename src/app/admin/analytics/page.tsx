@@ -25,8 +25,8 @@ export default function AdminAnalytics() {
             <CardContent className="p-5">
               <div className="flex items-center justify-between mb-3">
                 <span className="text-sm text-neutral-500">{m.label}</span>
-                <div className="w-9 h-9 rounded-md bg-accent/10 flex items-center justify-center">
-                  <m.icon className="w-5 h-5 text-accent" />
+                <div className="w-9 h-9 rounded-md bg-brand-500/10 flex items-center justify-center">
+                  <m.icon className="w-5 h-5 text-brand-600" />
                 </div>
               </div>
               <p className="text-2xl font-heading font-semibold text-neutral-900">{m.value}</p>

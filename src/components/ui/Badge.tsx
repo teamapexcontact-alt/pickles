@@ -5,27 +5,27 @@ import { cn } from "@/lib/utils";
 
 const spiceColors: Record<string, string> = {
   mild: "bg-neutral-100 text-neutral-700",
-  medium: "bg-accent-light text-accent",
-  hot: "bg-warning-light text-warning",
-  "extra-hot": "bg-error-light text-error",
+  medium: "bg-gold-100 text-gold-700",
+  hot: "bg-brand-100 text-brand-700",
+  "extra-hot": "bg-brand-200 text-brand-800",
 };
 
 const statusColors: Record<string, string> = {
-  active: "bg-accent-light text-accent",
+  active: "bg-herb-100 text-herb-700",
   inactive: "bg-neutral-100 text-neutral-500",
   placed: "bg-neutral-100 text-neutral-600",
-  preparing: "bg-warning-light text-warning",
-  packed: "bg-accent-light text-accent",
-  shipped: "bg-blue-50 text-blue-700",
-  out_for_delivery: "bg-blue-50 text-blue-700",
-  delivered: "bg-accent-light text-accent",
-  cancelled: "bg-error-light text-error",
-  returned: "bg-warning-light text-warning",
-  pending: "bg-warning-light text-warning",
-  paid: "bg-accent-light text-accent",
-  failed: "bg-error-light text-error",
+  preparing: "bg-gold-100 text-gold-700",
+  packed: "bg-herb-100 text-herb-700",
+  shipped: "bg-sky-50 text-sky-700",
+  out_for_delivery: "bg-sky-50 text-sky-700",
+  delivered: "bg-herb-100 text-herb-700",
+  cancelled: "bg-brand-100 text-brand-700",
+  returned: "bg-gold-100 text-gold-700",
+  pending: "bg-gold-100 text-gold-700",
+  paid: "bg-herb-100 text-herb-700",
+  failed: "bg-brand-100 text-brand-700",
   refunded: "bg-neutral-100 text-neutral-600",
-  partial: "bg-warning-light text-warning",
+  partial: "bg-gold-100 text-gold-700",
 };
 
 export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
@@ -45,10 +45,10 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
     } else {
       const variantClasses: Record<string, string> = {
         default: "bg-neutral-100 text-neutral-700",
-        success: "bg-accent-light text-accent",
-        warning: "bg-warning-light text-warning",
-        error: "bg-error-light text-error",
-        info: "bg-blue-50 text-blue-700",
+        success: "bg-herb-100 text-herb-700",
+        warning: "bg-gold-100 text-gold-700",
+        error: "bg-brand-100 text-brand-700",
+        info: "bg-sky-50 text-sky-700",
       };
       variantClass = variantClasses[variant];
     }

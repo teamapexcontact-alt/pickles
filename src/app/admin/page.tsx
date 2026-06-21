@@ -47,8 +47,8 @@ export default function AdminDashboard() {
             <CardContent className="p-4">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-xs text-neutral-500 font-medium uppercase tracking-wider">{stat.label}</span>
-                <div className="w-8 h-8 rounded-md bg-accent/10 flex items-center justify-center">
-                  <stat.icon className="w-4 h-4 text-accent" />
+                <div className="w-8 h-8 rounded-md bg-brand-500/10 flex items-center justify-center">
+                  <stat.icon className="w-4 h-4 text-brand-600" />
                 </div>
               </div>
               <p className="text-xl font-semibold text-neutral-900">{stat.value}</p>
@@ -144,19 +144,19 @@ export default function AdminDashboard() {
         </Card>
         <Card>
           <CardContent className="p-4 flex items-center gap-3">
-            <div className="w-10 h-10 rounded-md bg-accent/10 flex items-center justify-center flex-shrink-0">
-              <Users className="w-5 h-5 text-accent" />
+            <div className="w-10 h-10 rounded-md bg-brand-500/10 flex items-center justify-center flex-shrink-0">
+              <Users className="w-5 h-5 text-brand-600" />
             </div>
             <div>
               <p className="text-xs text-neutral-500">Repeat Customers</p>
               <p className="text-lg font-semibold">42.8%</p>
-              <p className="text-xs text-accent font-medium">+5.2% this month</p>
+              <p className="text-xs text-brand-600 font-medium">+5.2% this month</p>
             </div>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-4 flex items-center gap-3">
-            <div className="w-10 h-10 rounded-md bg-accent/10 flex items-center justify-center flex-shrink-0">
+            <div className="w-10 h-10 rounded-md bg-brand-500/10 flex items-center justify-center flex-shrink-0">
               <Package className="w-5 h-5 text-neutral-700" />
             </div>
             <div>

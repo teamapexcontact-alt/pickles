@@ -28,20 +28,20 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ) => {
-    const baseClasses = "inline-flex items-center justify-center gap-2 rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none";
+    const baseClasses = "inline-flex items-center justify-center gap-2 rounded-xl font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none";
 
     const variantClasses = {
-      primary: "bg-accent text-white hover:bg-accent-dark focus-visible:ring-accent",
-      secondary: "border border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-50 focus-visible:ring-neutral-400",
-      outline: "border-2 border-neutral-300 text-neutral-700 hover:bg-neutral-50 focus-visible:ring-neutral-400",
-      ghost: "text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900 focus-visible:ring-neutral-400",
+      primary: "bg-brand-600 text-white hover:bg-brand-700 shadow-sm hover:shadow-md active:scale-[0.98] focus-visible:ring-brand-500",
+      secondary: "border border-neutral-200 bg-white text-neutral-700 hover:bg-neutral-50 hover:border-neutral-300 focus-visible:ring-neutral-400",
+      outline: "border-2 border-brand-200 text-brand-700 hover:bg-brand-50 hover:border-brand-400 focus-visible:ring-brand-500",
+      ghost: "text-neutral-600 hover:bg-brand-50 hover:text-brand-700 focus-visible:ring-brand-500",
     };
 
     const sizeClasses = {
       sm: "px-3 py-1.5 text-xs",
-      md: "px-4 py-2.5 text-sm",
-      lg: "px-6 py-3 text-base",
-      xl: "px-8 py-4 text-lg",
+      md: "px-5 py-2.5 text-sm",
+      lg: "px-7 py-3 text-base",
+      xl: "px-9 py-4 text-lg",
     };
 
     return (

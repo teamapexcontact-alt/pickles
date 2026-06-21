@@ -44,7 +44,7 @@ export default function AdminOrders() {
                 placeholder="Search by order ID, customer name or phone..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full rounded-md border border-neutral-200 bg-white pl-10 pr-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-accent"
+                className="w-full rounded-md border border-neutral-200 bg-white pl-10 pr-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-brand-500"
               />
             </div>
             <Select
@@ -84,7 +84,7 @@ export default function AdminOrders() {
               {orders.map((order) => (
                 <tr key={order.id} className="hover:bg-neutral-50 transition-colors">
                   <td className="px-6 py-4">
-                    <span className="font-medium text-accent">{order.id}</span>
+                    <span className="font-medium text-brand-600">{order.id}</span>
                   </td>
                   <td className="px-6 py-4">
                     <div>

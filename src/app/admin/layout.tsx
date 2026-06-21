@@ -28,18 +28,18 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
             <button onClick={() => setSidebarOpen(true)} className="lg:hidden p-2 rounded-md hover:bg-neutral-100">
               <Menu className="w-5 h-5" />
             </button>
-            <Link href="/admin" className="text-lg font-heading font-semibold text-accent">
+            <Link href="/admin" className="text-lg font-heading font-semibold text-brand-600">
               APEX <span className="text-neutral-500 font-normal">Admin</span>
             </Link>
           </div>
           <div className="flex items-center gap-3">
             <button className="relative p-2 rounded-md hover:bg-neutral-100">
               <Bell className="w-5 h-5 text-neutral-600" />
-              <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error" />
+              <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-brand-600" />
             </button>
             <div className="flex items-center gap-2 pl-3 border-l border-neutral-200">
-              <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center">
-                <span className="text-sm font-medium text-accent">A</span>
+              <div className="w-8 h-8 rounded-full bg-brand-500/10 flex items-center justify-center">
+                <span className="text-sm font-medium text-brand-600">A</span>
               </div>
               <div className="hidden sm:block text-sm">
                 <p className="font-medium text-neutral-900">Admin</p>
@@ -57,7 +57,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         )}>
           <div className="flex items-center justify-between h-16 px-6 border-b border-neutral-200">
-            <Link href="/admin" className="text-lg font-heading font-semibold text-accent">
+            <Link href="/admin" className="text-lg font-heading font-semibold text-brand-600">
               APEX <span className="text-neutral-500 font-normal">Admin</span>
             </Link>
             <button onClick={() => setSidebarOpen(false)} className="lg:hidden p-2 rounded-md hover:bg-neutral-100">
@@ -73,7 +73,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
                 className={cn(
                   "flex items-center gap-3 px-4 py-2.5 rounded-md text-sm font-medium transition-colors",
                   pathname === link.href
-                    ? "text-accent bg-accent-light"
+                    ? "text-brand-600 bg-brand-50"
                     : "text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900"
                 )}
               >

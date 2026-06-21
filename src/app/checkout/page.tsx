@@ -20,7 +20,7 @@ export default function CheckoutPage() {
   return (
     <div className="container-custom py-12">
       <div className="mb-8">
-        <Link href="/cart" className="inline-flex items-center gap-2 text-sm text-neutral-500 hover:text-accent transition-colors">
+        <Link href="/cart" className="inline-flex items-center gap-2 text-sm text-neutral-500 hover:text-brand-600 transition-colors">
           <ArrowLeft className="w-4 h-4" />
           Back to Cart
         </Link>
@@ -70,9 +70,9 @@ export default function CheckoutPage() {
                 ].map((method) => (
                   <label
                     key={method.id}
-                    className="flex items-center gap-3 p-4 rounded-md border border-neutral-200 cursor-pointer hover:border-accent/50 transition-colors has-checked:border-accent has-checked:bg-accent-light"
+                    className="flex items-center gap-3 p-4 rounded-md border border-neutral-200 cursor-pointer hover:border-brand-600/50 transition-colors has-checked:border-brand-600 has-checked:bg-brand-50"
                   >
-                    <input type="radio" name="payment" defaultChecked={method.id === "upi"} className="accent-accent" />
+                    <input type="radio" name="payment" defaultChecked={method.id === "upi"} className="accent-brand-600" />
                     <span className="text-xl">{method.icon}</span>
                     <span className="text-sm font-medium">{method.name}</span>
                   </label>
@@ -111,7 +111,7 @@ export default function CheckoutPage() {
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-neutral-500">Shipping</span>
-                    <span className="text-accent font-medium">Free</span>
+                    <span className="text-brand-600 font-medium">Free</span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-neutral-500">Tax (GST)</span>
@@ -120,7 +120,7 @@ export default function CheckoutPage() {
                 </div>
                 <div className="border-t border-neutral-200 mt-4 pt-4 flex justify-between items-center">
                   <span className="font-heading font-semibold text-lg">Total</span>
-                  <span className="font-heading font-bold text-2xl text-accent">{formatCurrency(total)}</span>
+                  <span className="font-heading font-bold text-2xl text-brand-600">{formatCurrency(total)}</span>
                 </div>
                 <Button variant="primary" size="xl" fullWidth className="mt-6" leftIcon={<Lock className="w-4 h-4" />}>
                   Pay {formatCurrency(total)}

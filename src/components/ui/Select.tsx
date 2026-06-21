@@ -23,12 +23,12 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
 
     return (
       <div className="w-full">
-        {label && (
-          <label htmlFor={selectId} className="block text-sm font-medium text-neutral-700 mb-1.5">
-            {label}
-            {props.required && <span className="text-error ml-1" aria-hidden="true">*</span>}
-          </label>
-        )}
+          {label && (
+            <label htmlFor={selectId} className="block text-sm font-medium text-neutral-700 mb-1.5">
+              {label}
+              {props.required && <span className="text-brand-500 ml-1" aria-hidden="true">*</span>}
+            </label>
+          )}
         <div className="relative">
           <select
             ref={ref}

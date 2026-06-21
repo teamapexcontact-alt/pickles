@@ -132,7 +132,7 @@ export default function AdminContent() {
                 <Input label="Title" value={content.hero.title} onChange={(e) => updateField("hero", "title", e.target.value)} />
                 <div className="md:col-span-2">
                   <label className="block text-sm font-medium text-neutral-700 mb-1.5">Subtitle</label>
-                  <textarea value={content.hero.subtitle} onChange={(e) => updateField("hero", "subtitle", e.target.value)} rows={2} className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-accent resize-none" />
+                  <textarea value={content.hero.subtitle} onChange={(e) => updateField("hero", "subtitle", e.target.value)} rows={2} className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-brand-500 resize-none" />
                 </div>
                 <Input label="Shop Button Text" value={content.hero.ctaShop} onChange={(e) => updateField("hero", "ctaShop", e.target.value)} />
                 <Input label="Process Button Text" value={content.hero.ctaProcess} onChange={(e) => updateField("hero", "ctaProcess", e.target.value)} />
@@ -149,11 +149,11 @@ export default function AdminContent() {
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="md:col-span-2">
                   <label className="block text-sm font-medium text-neutral-700 mb-1.5">Title</label>
-                  <textarea value={content.cta.title} onChange={(e) => updateField("cta", "title", e.target.value)} rows={2} className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-accent resize-none" />
+                  <textarea value={content.cta.title} onChange={(e) => updateField("cta", "title", e.target.value)} rows={2} className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-brand-500 resize-none" />
                 </div>
                 <div className="md:col-span-2">
                   <label className="block text-sm font-medium text-neutral-700 mb-1.5">Subtitle</label>
-                  <textarea value={content.cta.subtitle} onChange={(e) => updateField("cta", "subtitle", e.target.value)} rows={2} className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-accent resize-none" />
+                  <textarea value={content.cta.subtitle} onChange={(e) => updateField("cta", "subtitle", e.target.value)} rows={2} className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-brand-500 resize-none" />
                 </div>
                 <Input label="Shop Button Text" value={content.cta.ctaShop} onChange={(e) => updateField("cta", "ctaShop", e.target.value)} />
                 <Input label="WhatsApp Button Text" value={content.cta.ctaWhatsApp} onChange={(e) => updateField("cta", "ctaWhatsApp", e.target.value)} />
@@ -206,7 +206,7 @@ export default function AdminContent() {
                     <Input label="Icon Name" value={item.icon} onChange={(e) => updateArrayItem("benefits", i, "icon", e.target.value)} />
                     <Input label="Title" value={item.title} onChange={(e) => updateArrayItem("benefits", i, "title", e.target.value)} />
                     <label className="block text-sm font-medium text-neutral-700 mb-1.5">Description</label>
-                    <textarea value={item.description} onChange={(e) => updateArrayItem("benefits", i, "description", e.target.value)} rows={2} className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-accent resize-none" />
+                    <textarea value={item.description} onChange={(e) => updateArrayItem("benefits", i, "description", e.target.value)} rows={2} className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-brand-500 resize-none" />
                   </div>
                 </CardContent>
               </Card>
@@ -234,7 +234,7 @@ export default function AdminContent() {
                     <Input label="Title" value={item.title} onChange={(e) => updateArrayItem("processSteps", i, "title", e.target.value)} />
                     <div className="md:col-span-2">
                       <label className="block text-sm font-medium text-neutral-700 mb-1.5">Description</label>
-                      <textarea value={item.description} onChange={(e) => updateArrayItem("processSteps", i, "description", e.target.value)} rows={2} className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-accent resize-none" />
+                      <textarea value={item.description} onChange={(e) => updateArrayItem("processSteps", i, "description", e.target.value)} rows={2} className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-brand-500 resize-none" />
                     </div>
                   </div>
                 </CardContent>
@@ -265,7 +265,7 @@ export default function AdminContent() {
                     <Input label="Product" value={item.product} onChange={(e) => updateArrayItem("testimonials", i, "product", e.target.value)} />
                     <div className="md:col-span-2">
                       <label className="block text-sm font-medium text-neutral-700 mb-1.5">Review Text</label>
-                      <textarea value={item.text} onChange={(e) => updateArrayItem("testimonials", i, "text", e.target.value)} rows={3} className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-accent resize-none" />
+                      <textarea value={item.text} onChange={(e) => updateArrayItem("testimonials", i, "text", e.target.value)} rows={3} className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-brand-500 resize-none" />
                     </div>
                   </div>
                 </CardContent>
@@ -291,9 +291,9 @@ export default function AdminContent() {
                   </div>
                   <div className="grid gap-3">
                     <label className="block text-sm font-medium text-neutral-700 mb-1.5">Question</label>
-                    <textarea value={item.q} onChange={(e) => updateArrayItem("faq", i, "q", e.target.value)} rows={2} className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-accent resize-none" />
+                    <textarea value={item.q} onChange={(e) => updateArrayItem("faq", i, "q", e.target.value)} rows={2} className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-brand-500 resize-none" />
                     <label className="block text-sm font-medium text-neutral-700 mb-1.5">Answer</label>
-                    <textarea value={item.a} onChange={(e) => updateArrayItem("faq", i, "a", e.target.value)} rows={3} className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-accent resize-none" />
+                    <textarea value={item.a} onChange={(e) => updateArrayItem("faq", i, "a", e.target.value)} rows={3} className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-brand-500 resize-none" />
                   </div>
                 </CardContent>
               </Card>
@@ -325,7 +325,7 @@ export default function AdminContent() {
             onClick={() => setActiveSection(tab.key)}
             className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
               activeSection === tab.key
-                ? "bg-accent text-white"
+                ? "bg-brand-600 text-white"
                 : "text-neutral-500 hover:bg-neutral-100 hover:text-neutral-700"
             }`}
           >

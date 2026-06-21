@@ -49,7 +49,7 @@ export default function OrderDetailPage() {
   if (loading) {
     return (
       <div className="min-h-[60vh] flex items-center justify-center">
-        <div className="w-8 h-8 border-2 border-accent border-t-transparent rounded-full animate-spin" />
+        <div className="w-8 h-8 border-2 border-brand-600 border-t-transparent rounded-full animate-spin" />
       </div>
     );
   }
@@ -73,7 +73,7 @@ export default function OrderDetailPage() {
 
   return (
     <div className="container-custom py-12">
-      <Link href="/account" className="inline-flex items-center gap-1.5 text-sm text-neutral-500 hover:text-accent transition-colors mb-6">
+      <Link href="/account" className="inline-flex items-center gap-1.5 text-sm text-neutral-500 hover:text-brand-600 transition-colors mb-6">
         <ArrowLeft className="w-4 h-4" /> Back to Account
       </Link>
 
@@ -114,8 +114,8 @@ export default function OrderDetailPage() {
                 {mockOrder.timeline.map((step, i) => (
                   <div key={step.status} className="flex gap-4 pb-4 last:pb-0">
                     <div className="flex flex-col items-center">
-                      <div className={`w-3 h-3 rounded-full ${step.done ? "bg-accent" : "bg-neutral-300"}`} />
-                      {i < mockOrder.timeline.length - 1 && <div className={`w-0.5 flex-1 ${step.done ? "bg-accent" : "bg-neutral-200"}`} />}
+                      <div className={`w-3 h-3 rounded-full ${step.done ? "bg-brand-600" : "bg-neutral-300"}`} />
+                      {i < mockOrder.timeline.length - 1 && <div className={`w-0.5 flex-1 ${step.done ? "bg-brand-600" : "bg-neutral-200"}`} />}
                     </div>
                     <div className="flex-1 -mt-1">
                       <p className={`text-sm font-medium ${step.done ? "text-neutral-900" : "text-neutral-400"}`}>{step.status}</p>
@@ -134,9 +134,9 @@ export default function OrderDetailPage() {
               <h2 className="font-semibold text-lg text-neutral-900 mb-4">Order Summary</h2>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between"><span className="text-neutral-500">Subtotal</span><span>{formatCurrency(mockOrder.subtotal)}</span></div>
-                <div className="flex justify-between"><span className="text-neutral-500">Shipping</span><span className="text-accent">Free</span></div>
+                <div className="flex justify-between"><span className="text-neutral-500">Shipping</span><span className="text-brand-600">Free</span></div>
                 <div className="flex justify-between"><span className="text-neutral-500">Tax</span><span>{formatCurrency(mockOrder.tax)}</span></div>
-                <div className="flex justify-between border-t pt-2 mt-2"><span className="font-semibold">Total</span><span className="font-bold text-lg text-accent">{formatCurrency(mockOrder.total)}</span></div>
+                <div className="flex justify-between border-t pt-2 mt-2"><span className="font-semibold">Total</span><span className="font-bold text-lg text-brand-600">{formatCurrency(mockOrder.total)}</span></div>
               </div>
             </CardContent>
           </Card>
@@ -154,7 +154,7 @@ export default function OrderDetailPage() {
                 <CreditCard className="w-5 h-5 text-neutral-400 mt-0.5 flex-shrink-0" />
                 <div>
                   <h3 className="font-medium text-sm text-neutral-900 mb-1">Payment</h3>
-                  <p className="text-sm text-neutral-500">{mockOrder.payment.method}<br /><span className="text-accent font-medium">Paid</span></p>
+                  <p className="text-sm text-neutral-500">{mockOrder.payment.method}<br /><span className="text-brand-600 font-medium">Paid</span></p>
                 </div>
               </div>
             </CardContent>

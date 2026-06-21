@@ -53,7 +53,7 @@ export default function TermsPage() {
 
         <section className="mb-8">
           <h2 className="font-heading font-semibold text-xl text-neutral-900 mb-3">8. Contact</h2>
-          <p className="text-neutral-600 leading-relaxed">For questions about these terms, please contact us at <a href="mailto:support@apexpickles.com" className="text-accent hover:underline">support@apexpickles.com</a>.</p>
+          <p className="text-neutral-600 leading-relaxed">For questions about these terms, please contact us at <a href="mailto:support@apexpickles.com" className="text-brand-600 hover:underline">support@apexpickles.com</a>.</p>
         </section>
       </div>
 

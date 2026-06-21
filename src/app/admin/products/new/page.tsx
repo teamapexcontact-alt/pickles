@@ -101,7 +101,7 @@ export default function NewProductPage() {
                 <select
                   value={product.categoryId}
                   onChange={(e) => setProduct((p) => ({ ...p, categoryId: e.target.value }))}
-                  className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 bg-white focus:outline-none focus:border-accent"
+                  className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 bg-white focus:outline-none focus:border-brand-500"
                   required
                 >
                   <option value="">Select category</option>
@@ -115,7 +115,7 @@ export default function NewProductPage() {
                 <select
                   value={product.spiceLevel}
                   onChange={(e) => setProduct((p) => ({ ...p, spiceLevel: e.target.value }))}
-                  className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 bg-white focus:outline-none focus:border-accent"
+                  className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 bg-white focus:outline-none focus:border-brand-500"
                 >
                   {spiceLevels.map((s) => (
                     <option key={s.value} value={s.value}>{s.label}</option>
@@ -130,7 +130,7 @@ export default function NewProductPage() {
                 value={product.description}
                 onChange={(e) => setProduct((p) => ({ ...p, description: e.target.value }))}
                 rows={3}
-                className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-accent resize-none"
+                className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-brand-500 resize-none"
                 placeholder="Describe your product..."
               />
             </div>
@@ -140,7 +140,7 @@ export default function NewProductPage() {
                 value={product.ingredients}
                 onChange={(e) => setProduct((p) => ({ ...p, ingredients: e.target.value }))}
                 rows={2}
-                className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-accent resize-none"
+                className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-brand-500 resize-none"
                 placeholder="Mustard oil, mango, red chili, fenugreek..."
               />
             </div>
@@ -150,17 +150,17 @@ export default function NewProductPage() {
                 value={product.processDescription}
                 onChange={(e) => setProduct((p) => ({ ...p, processDescription: e.target.value }))}
                 rows={2}
-                className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-accent resize-none"
+                className="w-full rounded-md border border-neutral-200 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-brand-500 resize-none"
                 placeholder="How this pickle is traditionally made..."
               />
             </div>
             <div className="flex items-center gap-6 mt-4">
               <label className="flex items-center gap-2 cursor-pointer">
-                <input type="checkbox" checked={product.isActive} onChange={(e) => setProduct((p) => ({ ...p, isActive: e.target.checked }))} className="rounded border-neutral-200 text-accent focus:ring-accent" />
+                <input type="checkbox" checked={product.isActive} onChange={(e) => setProduct((p) => ({ ...p, isActive: e.target.checked }))} className="rounded border-neutral-200 text-brand-600 focus:ring-brand-500" />
                 <span className="text-sm text-neutral-700">Active</span>
               </label>
               <label className="flex items-center gap-2 cursor-pointer">
-                <input type="checkbox" checked={product.featured} onChange={(e) => setProduct((p) => ({ ...p, featured: e.target.checked }))} className="rounded border-neutral-200 text-accent focus:ring-accent" />
+                <input type="checkbox" checked={product.featured} onChange={(e) => setProduct((p) => ({ ...p, featured: e.target.checked }))} className="rounded border-neutral-200 text-brand-600 focus:ring-brand-500" />
                 <span className="text-sm text-neutral-700">Featured</span>
               </label>
             </div>

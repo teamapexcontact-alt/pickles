@@ -20,7 +20,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         {label && (
           <label htmlFor={inputId} className="block text-sm font-medium text-neutral-700 mb-1.5">
             {label}
-            {props.required && <span className="text-error ml-1" aria-hidden="true">*</span>}
+            {props.required && <span className="text-brand-500 ml-1" aria-hidden="true">*</span>}
           </label>
         )}
         <div className="relative">
@@ -36,7 +36,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
               "input-base",
               leftIcon ? "pl-10" : "",
               rightIcon ? "pr-10" : "",
-              error && "border-error focus:border-error focus:ring-error/20",
+              error && "border-brand-500 focus:border-brand-500 focus:ring-brand-500/20",
               props.disabled && "bg-neutral-100 cursor-not-allowed",
               className
             )}
@@ -51,7 +51,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           )}
         </div>
         {error && (
-          <p id={`${inputId}-error`} className="mt-1.5 text-sm text-error" role="alert">
+          <p id={`${inputId}-error`} className="mt-1.5 text-sm text-brand-600" role="alert">
             {error}
           </p>
         )}
