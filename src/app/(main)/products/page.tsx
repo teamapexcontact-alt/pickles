@@ -18,6 +18,13 @@ type ProductData = {
   spiceLevel: string; description: string; badge?: string;
 };
 
+const productImageMap: Record<string, string> = {
+  p1: "/mango-pickle.jpg",
+  p2: "/gongura-pickle.jpg",
+  p3: "/chicken-pickle.jpg",
+  p4: "/prawn-pickle.jpg",
+};
+
 const allProducts: ProductData[] = [
   { id: "p1", name: "Classic Mango Pickle", slug: "classic-mango-pickle", category: "Mango Pickles", categorySlug: "mango-pickles", price: 299, weight: "500g", stock: 45, spiceLevel: "medium", description: "Traditional Andhra-style mango pickle with select raw mangoes and authentic spice blend.", badge: "Best Seller" },
   { id: "p2", name: "Gongura Pickle", slug: "gongura-pickle", category: "Gongura", categorySlug: "gongura", price: 349, weight: "500g", stock: 32, spiceLevel: "hot", description: "Authentic gongura pickle made with fresh sorrel leaves and traditional spices.", badge: "Premium" },
@@ -234,9 +241,13 @@ export default function ProductsPage() {
                     transition={{ delay: (i % 6) * 0.05 }}
                   >
                     <Card variant="hover" padding="none" className="overflow-hidden group">
-                      <div className="relative aspect-[4/5] bg-gradient-to-br from-brand-50 via-warm-50 to-neutral-100 flex items-center justify-center overflow-hidden">
+                      <div className={`relative aspect-[4/5] flex items-center justify-center overflow-hidden ${
+                        productImageMap[product.id]
+                          ? "bg-transparent after:content-[''] after:absolute after:inset-0 after:bg-brand-600/0 group-hover:after:bg-brand-600/8 after:transition-colors after:duration-400 after:ease after:pointer-events-none after:z-[1]"
+                          : "bg-gradient-to-br from-brand-50 via-warm-50 to-neutral-100"
+                      }`}>
                         {product.badge && (
-                          <Badge variant="default" className="absolute top-3 left-3 z-10 !bg-white/90 text-neutral-800 border-0 shadow-sm">
+                          <Badge variant="default" className="absolute top-3 left-3 z-[2] !bg-white/90 text-neutral-800 border-0 shadow-sm">
                             {product.badge}
                           </Badge>
                         )}
@@ -254,11 +265,20 @@ export default function ProductsPage() {
                             <Heart className={`w-4 h-4 transition-colors ${isInWishlist(product.id) ? "fill-brand-500 text-brand-500" : "text-neutral-400"}`} />
                           </button>
                         </div>
-                        <span className="text-5xl sm:text-6xl opacity-80 group-hover:scale-110 transition-transform duration-500">🥫</span>
+                        {productImageMap[product.id] ? (
+                          <img
+                            src={productImageMap[product.id]}
+                            alt={product.name}
+                            className="w-full h-full object-cover object-center group-hover:scale-[1.06] pointer-events-none"
+                            style={{ transition: 'transform 0.4s ease' }}
+                          />
+                        ) : (
+                          <span className="text-5xl sm:text-6xl opacity-80 group-hover:scale-110 transition-transform duration-500">🥫</span>
+                        )}
                         {product.stock > 0 && (
                           <button
                             onClick={() => handleAddToCart(product)}
-                            className="absolute bottom-3 right-3 p-2.5 rounded-xl bg-brand-600 text-white opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-200 shadow-lg"
+                            className="absolute bottom-3 right-3 z-10 p-2.5 rounded-xl bg-brand-600 text-white opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-200 shadow-lg"
                           >
                             <ShoppingCart className="w-4 h-4" />
                           </button>
