@@ -258,19 +258,47 @@ export default function HomePage() {
               </div>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: -16 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
               className="hidden lg:block"
             >
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://images.unsplash.com/photo-1590932617871-63eb5cea0f15?w=800&q=80"
-                  alt="Homemade pickle preparation"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
+              <div className="relative w-full aspect-[4/5] group before:content-[''] before:absolute before:-inset-[10px] before:border before:border-[#D4A853]/35 before:pointer-events-none before:z-[3]">
+                <div className="absolute inset-0 overflow-hidden shadow-2xl">
+                  <img
+                    src="/grandmother-making-pickles.jpg"
+                    alt="Homemade pickle preparation by grandmother"
+                    className="w-full h-full object-cover object-[center_top] group-hover:scale-[1.03] pointer-events-none"
+                    style={{ transition: 'transform 0.6s ease' }}
+                    loading="lazy"
+                  />
+                  {/* Subtle warm overlay */}
+                  <div 
+                    className="absolute inset-0 z-[1] pointer-events-none" 
+                    style={{ backgroundColor: 'rgba(139, 58, 15, 0.08)' }}
+                  />
+                  {/* Bottom gradient overlay */}
+                  <div 
+                    className="absolute bottom-0 left-0 right-0 z-[1] pointer-events-none" 
+                    style={{ 
+                      background: 'linear-gradient(to top, rgba(13, 10, 7, 0.88), transparent)',
+                      height: '45%' 
+                    }}
+                  />
+                  {/* Caption text */}
+                  <div 
+                    className="absolute bottom-[28px] left-0 right-0 text-center z-[2]"
+                    style={{
+                      fontFamily: "'Cormorant Garamond', serif",
+                      fontStyle: 'italic',
+                      fontSize: '18px',
+                      color: 'rgba(253, 248, 243, 0.85)' // Ivory at 85% opacity
+                    }}
+                  >
+                    Sun-dried. Slow-ground. Grandmother-approved.
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>
